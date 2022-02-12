@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Arrow Functions</title>
+</head>
+
+<body>
+    <div class="container">
+        This is arrow functions tutorial.
+    </div>
+    <script>
+// ************************************************************************
+        //Normal way to write function
+         // function greet() {
+        //     console.log('Good morning');
+        // }
+// ************************************************************************
+        // Arrow function
+        // let greet =  ()=> {
+        //     console.log('Good morning');
+        // }
+
+        //another way to write arrow function
+        let greet = () => console.log('Good morning');
+        greet();
+// ************************************************************************
+        //set timeout function, parameter 3000 milliseconds
+        setTimeout(() => {
+            console.log("We are inside settimeout");
+        }, 3000);
+// ************************************************************************
+        // let sum2 = (a, b)=>{
+        //     return a+b;
+        // };
+
+//another shorthand
+        let sum2 = (a, b) => a + b; //(a,b) are parameters and a+b is return
+        let half = a => a / 2; //a is parameter and a/2 will return
+        sum2(2,3);
+        half(6);
+// ************************************************************************
+
+//arrow functions for loops
+        let obj1 = {
+            greeting: "Good Morning",
+            names: ["Harry", "Rohan", "SkillF", "DjKhiladi"],
+            speak() {
+                this.names.forEach((student) => {
+                    //Note - 'lexical this'(in case of this.greeting) 
+                    //if we used normal way for function speak()
+                    //then it will never catch the greeting variable from object obj1 but
+                    //as we using arrow function way, so this is the speciality of the arrow functions that
+                    //it also catch the variables declared in parent object.
+                    console.log(this.greeting + " Kukdoo Koo " + student);
+                });
+            }
+        }
+        obj1.speak();
+// ************************************************************************
+    </script>
+</body>
+
+</html>

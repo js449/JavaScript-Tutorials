@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Interaction using alert, confirm and prompt</title>
+</head>
+
+<body>
+    <div class="container">
+        This is a page
+    </div>
+
+    <script>
+        // Alert in 'in-browser' JavaScript - Does not return anything
+        // alert("This is a message"); //alert() is a function take a string argumentand open a window on browser for user.
+
+        // Prompt in JS(when we want to ask something to user) ----return the stored value at browser when given by user
+        // let name = prompt("What is your name?", "Guest");
+        // console.log(name);
+
+        // Confirm in JS
+        let deletePost = confirm("Do you really want to delete this post?");
+
+        // console.log(deletePost);
+        if (deletePost) {
+            // Code to delete the post
+            console.log("Your post has been deleted successfully");
+        }
+        else {
+            // Code to cancel deletion of the post
+            console.log("Your post has not been deleted");
+        }
+
+        // ******************************************************************************************
+        // let checkAge = confirm("are you 18+?");
+        // if(checkAge){
+        //     console.log("verfication")
+        // }
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Arrays and Objects</title>
+</head>
+
+<body>
+    <div class="container">simple html</div>
+    <script>
+        //premitive datatypes
+        let myVar = 34;
+        let myVar2 = "string";
+        let myVar3 = true;
+        let myVar4 = null;
+        let myVar5 = undefined;
+
+        //objects - stores key value pairs
+        // let employee = {
+        //     name: "Jay",
+        //     salary: 10,
+        //     channel: "Jay's World",
+        //     "channel 2": "ProgrammingWithJay",
+        // }
+        // console.log(employee);
+        
+        //property access
+        //employee.channel; or  // employee[channel];
+
+        //note - if our variable has space in between (example channel 2) then we can only access property like this
+        // employee['channel 2'];
+        
+
+
+        //Arrays - a special types of objects
+        // let names = [1, 2, 4, "jay", undefined];
+        // console.log(names[1]);
+
+        // let names = new Array(41, 2, 4, "Jay", undefined);
+        // console.log(names);
+
+        let names = new Array(23, 25);
+        // let names = new Array(23);
+        console.log(names.length);
+        names = names.sort();
+        names.push("this is pushed"); //to push new element into the array in last
+        console.log(names);
+    </script>
+</body>
+
+</html>
